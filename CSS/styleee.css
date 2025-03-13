@@ -1,0 +1,28 @@
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background-color: black;
+  font-family: Arial, sans-serif;
+}
+
+/* Background Text Container */
+#background-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Individual Text Style */
+.background-text {
+  position: absolute;
+  font-size: 3vw; /* Responsive font size */
+  color: rgba(255, 165, 0, 0.1); /* Light orange with low opacity */
+  user-select: none; /* Prevent text selection */
+  transform: rotate(0deg); /* Default rotation */
+  white-space: nowrap; /* Prevent wrapping */
+  pointer-events: none; /* Disable interaction */
+}

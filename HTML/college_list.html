@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COLLEGE LIST</title>
+    <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anta" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/Project0/CSS/style_cllg_list.css">
+</head>
+<body>
+<div class="layout">
+    <aside class="sidebar" id="sidebar">
+        <div class="expand-bar" id="expand-bar">
+            <span>PROJECT 0</span>
+            <div class="expand-icons">
+                <button class="expand-up" id="expand-up"></button>
+                <button class="expand-full" id="expand-full"></button>
+                <button class="expand-down" id="expand-down"></button>
+            </div>
+        </div>
+        <!-- Bottom SVG for visual curves (below boxes) -->
+        <svg id="curves-bottom" class="curves-svg curves-bottom" width="100%" height="100%"></svg>
+        <!-- Top SVG for hover detection (above boxes) -->
+        <svg id="curves-top" class="curves-svg curves-top" width="100%" height="100%"></svg>
+        <div class="filter">
+            <form name="fltr1" id="fltr1" action="/action_page.java">
+                <div class="combine">
+                    <fieldset class="cllgbox" id="cllgbox" data-title="COLLEGE">
+                        <legend>COLLEGE</legend>
+                        <ul class="checklist">
+                            <li><input type="checkbox" id="item1"><label for="item1">NIT</label></li>
+                            <li><input type="checkbox" id="item2"><label for="item2">IIT</label></li>
+                            <li><input type="checkbox" id="item3"><label for="item3">IIIT</label></li>
+                            <li><input type="checkbox" id="item4"><label for="item4">GFTI</label></li>
+                            <li><input type="checkbox" id="item5"><label for="item5">OTHER</label></li>
+                        </ul>
+                    </fieldset>
+                    <fieldset class="branchbox" id="branchbox" data-title="BRANCH">
+                        <legend>BRANCH</legend>
+                        <ul class="branchselect">
+                            <li><input type="checkbox" id="branch1"><label for="branch1">CSE</label></li>
+                            <li><input type="checkbox" id="branch2"><label for="branch2">ECE</label></li>
+                            <li><input type="checkbox" id="branch3"><label for="branch3">EEE</label></li>
+                            <li><input type="checkbox" id="branch4"><label for="branch4">MECH</label></li>
+                            <li><input type="checkbox" id="branch5"><label for="branch5">EIE</label></li>
+                        </ul>
+                    </fieldset>
+                    <fieldset class="castebox" id="castebox" data-title="CASTE">
+                        <legend>CASTE</legend>
+                        <ul class="casteselect">
+                            <li><input type="checkbox" id="caste1"><label for="caste1">EWS</label></li>
+                            <li><input type="checkbox" id="caste2"><label for="caste2">OPEN</label></li>
+                            <li><input type="checkbox" id="caste3"><label for="caste3">SC</label></li>
+                            <li><input type="checkbox" id="caste4"><label for="caste4">ST</label></li>
+                            <li><input type="checkbox" id="caste5"><label for="caste5">OBC</label></li>
+                            <li><input type="checkbox" id="caste6"><label for="caste6">PWD</label></li>
+                            <li><input type="checkbox" id="caste7"><label for="caste7">OBC-NCL</label></li>
+                        </ul>
+                    </fieldset>
+                </div>                
+                <fieldset class="rankbox" id="rankbox">
+                    <legend>RANK</legend>
+                    <input type="text" name="rank" id="rank">
+                </fieldset>
+                <br>
+                <input type="submit" value="SUBMIT">
+            </form>
+        </div>
+    </aside>
+</div>
+
+<div id="navbar">
+    <div class="topnav">
+        <a href="home.html">Home</a>
+        <a href="college_list.html" class="active">College list</a>
+        <a href="probable_college.html">Probable college</a>
+        <a href="college_predictor.html">College predictor</a>
+        <a href="college_info.html">College info</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <svg class="rotating-text-svg" viewBox="0 0 1420 80" width="1420" height="80">
+        <defs>
+            <path id="navbarPath" d="
+                M 45,-4
+                h 1327
+                a 30,30 0 0 1 30,30
+                v 20
+                a 30,30 0 0 1 -30,30
+                h -1327
+                a 30,30 0 0 1 -30,-30
+                v -20
+                a 30,30 0 0 1 30,-30
+                z" />
+        </defs>
+        <text fill="white" font-size="12" font-weight="bold">
+            <textPath xlink:href="#navbarPath" startOffset="0%">
+                NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT GFTI IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT GFIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT NIT IIIT GFTI IIIT NIT IIT NIT IIIT GFTI IIIT NIT IIT NIT IIIT GFTI IIT NIT IIT GFTI IIIT NIT IIT NIT IIIT GFTI IIIT NIT IIT GFTI NIT IIT IIIT
+                <animate 
+                    attributeName="startOffset" 
+                    from="0%" 
+                    to="100%" 
+                    dur="60s" 
+                    repeatCount="indefinite" />
+            </textPath>
+            <textPath xlink:href="#navbarPath" startOffset="-100%">
+                NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT GFTI IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT GFIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT NIT IIIT GFTI IIIT NIT IIT NIT IIIT GFTI IIIT NIT IIT NIT IIIT GFTI IIT NIT IIT GFTI IIIT NIT IIT NIT IIIT GFTI IIIT NIT IIT GFTI NIT IIT IIIT
+                <animate 
+                    attributeName="startOffset" 
+                    from="-100%" 
+                    to="0%" 
+                    dur="60s" 
+                    repeatCount="indefinite" />
+            </textPath>
+        </text>
+    </svg>
+</div>
+
+<script src="/Project0/JAVA SCRIPT/college_list.js"></script>
+</body>
+</html>

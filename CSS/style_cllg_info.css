@@ -1,0 +1,199 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: black;
+}
+
+:root {
+  --backcol: hsla(0, 90%, 100%, 0.023);
+  --boxshadow: hsla(0, 100%, 100%, 0.25);
+  --rightboxshdw: hsla(53, 76%, 75%, 0.7);
+  --rightback: hsla(53, 76%, 72%, 0.057);
+  --boxshdopt: hsla(53, 80%, 36%, 0.681);
+}
+
+.anim {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: orange;
+  margin-top: 150px;
+}
+
+#navbar {
+  width: 94%;
+  position: fixed;
+  top: 10px;
+  left: 40px;
+  z-index: 1000;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+  border-radius: 30px;
+  /* border: 4px solid rgba(255, 255, 255, 0.582); */
+  box-shadow: 5px 5px 33px 2px rgba(192, 59, 59, 0.5), -5px -5px 20px 2px rgba(192, 59, 59, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.topnav a {
+  color: rgb(207, 206, 206);
+  text-align: center;
+  padding: 20px 35px;
+  border-radius: 30px;
+  margin: 5px 0px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: Monoton;
+  font-weight:lighter;
+  transition: background-color 0.5s, color 0.5s, ease-in;
+}
+
+.topnav a:hover {
+  background-color: orangered;
+  border-radius: 30px;
+  color: white;
+}
+
+.topnav a.active {
+  background-color: rgb(15, 174, 4);
+  border-radius: 30px;
+  color: rgb(0, 0, 0);
+}
+
+.topnav a.make-transparent {
+  background-color: transparent !important;
+  border-radius: 30px;
+  color: rgb(207, 206, 206) !important;
+}
+
+.search-container {
+  position: fixed;
+  width: 400px;
+  top: 50%;
+  left: 35%;
+  z-index: 2;
+}
+
+.search-container input[type="text"] {
+  width: 100%;
+  top: 45%;
+  padding: 10px 30px 10px 20px;
+  border: 4px solid #ccc;
+  border-radius: 25px;
+  font-size: 20px;
+  transition: border-color 0.5s;
+}
+
+.search-container input[type="text"]:focus {
+  border-color: yellow;
+  outline: none;
+}
+
+.search-container .search-icon {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #aaa;
+}
+
+.search-container .search-icon:hover {
+  color: rgb(4, 161, 4);
+}
+
+.search-container #clear-btn {
+  position: absolute;
+  right: 35px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #aaa;
+  cursor: pointer;
+  display: none;
+}
+
+.search-container #clear-btn:hover {
+  color: #ff0000;
+}
+
+.search-container input[type="text"]:not(:placeholder-shown) ~ #clear-btn {
+  display: block;
+}
+
+.search_inst {
+  color: antiquewhite;
+  font-size: 200px;
+  font-weight: bold;
+  position: fixed;
+  top: 22%;
+  left: 18%;
+  z-index: 1;
+}
+
+.cllg {
+  color: rgb(248, 5, 5);
+  font-size: 200px;
+  font-weight: bold;
+  position: fixed;
+  top: 30%;
+  left: 35%;
+  z-index: 1;
+}
+
+.search_inst::before {
+  content: "\f002";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 700;
+  font-size: 800px;
+  color: rgba(255, 255, 255, 0.09);
+  position: absolute;
+  top: -100px;
+  left: 120px;
+  z-index: -1;
+}
+
+#background-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.background-text {
+  position: absolute;
+  font-size: 1vw;
+  color: white; /* Initial color, changed from orange */
+  opacity: 0.03; /* Initial opacity */
+  font-weight: bold;
+  transform: rotate(0deg);
+  pointer-events: none;
+  user-select: none;
+  transition: opacity 0.2s ease, color 0.2s ease; /* Smooth transition */
+}
+
+.highlight {
+  opacity: 1; /* Highlighted opacity */
+}
+
+.cursor-outline {
+  position: fixed;
+  width: 200px; /* Matches radius * 2 */
+  height: 200px;
+  border: 2px solid white;
+  border-radius: 50%;
+  opacity: 0.2;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: all 0.1s ease;
+  z-index: 10; /* Ensure it’s above background text */
+}

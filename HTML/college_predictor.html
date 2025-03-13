@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COLLEGE PREDICTOR</title>
+    <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anta" rel="stylesheet">
+    <link rel="stylesheet" href="/Project0/CSS/style_cllg_pred.css">
+</head>
+<body>
+    <!-- Work in Progress Background with Larger Triangle -->
+    <div class="wip-background">
+        <div class="wip-text">
+            <svg class="wip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+                <!-- Larger Triangle -->
+                <path d="M16 2l14 28H2L16 2z" stroke="black" stroke-width="4" fill="none" />
+                <!-- Exclamation Mark -->
+                <path d="M16 13v7" stroke="red" stroke-width="2" stroke-linecap="round" />
+                <circle cx="16" cy="23" r="1" fill="red" />
+            </svg>
+            <span>Work in Progress</span>
+            <svg class="wip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+                <!-- Larger Triangle -->
+                <path d="M16 2l14 28H2L16 2z" stroke="yellow" stroke-width="4" fill="none" />
+                <!-- Exclamation Mark -->
+                <path d="M16 13v7" stroke="red" stroke-width="2" stroke-linecap="round" />
+                <circle cx="16" cy="23" r="1" fill="red" />
+            </svg>
+        </div>
+    </div>
+
+    <div id="navbar">
+        <div class="topnav">
+            <a href="home.html" >Home</a>
+            <a href="college_list.html">College list</a>
+            <a href="probable_college.html">Probable college</a>
+            <a href="college_predictor.html" class="active">College predictor</a>
+            <a href="college_info.html">College info</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <!-- SVG for rotating text along outer border -->
+        <svg class="rotating-text-svg" viewBox="0 0 1420 80" width="1420" height="80">
+            <defs>
+                <path id="navbarPath" d="
+                    M 45,-4
+                    h 1327
+                    a 30,30 0 0 1 30,30
+                    v 20
+                    a 30,30 0 0 1 -30,30
+                    h -1327
+                    a 30,30 0 0 1 -30,-30
+                    v -20
+                    a 30,30 0 0 1 30,-30
+                    z" />
+            </defs>
+            <text fill="white" font-size="12" font-weight="bold">
+                <textPath xlink:href="#navbarPath" startOffset="0%">
+                    NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT GFTI IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT GFIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIIT GFTI IIIT NIT IIT NIT IIIT GFTI IIIT NIT IIT NIT IIIT GFTI IIIT NIT IIT NIT IIIT GFTI IIIT NIT IIT GFTI
+                    <animate 
+                        attributeName="startOffset" 
+                        from="0%" 
+                        to="100%" 
+                        dur="60s" 
+                        repeatCount="indefinite" />
+                </textPath>
+                <textPath xlink:href="#navbarPath" startOffset="-100%">
+                    NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT GFTI IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT GFIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIT GFTI IIIT NIT IIIT GFTI IIIT NIT IIT NIT IIIT GFTI IIIT NIT IIT NIT IIIT GFTI IIIT NIT IIT NIT IIIT GFTI IIIT NIT IIT GFTI
+                    <animate 
+                        attributeName="startOffset" 
+                        from="-100%" 
+                        to="0%" 
+                        dur="60s" 
+                        repeatCount="indefinite" />
+                </textPath>
+            </text>
+        </svg>
+    </div>
+
+    <script src="/Project0/JAVA SCRIPT/college_predictor.js"></script>
+</body>
+</html>

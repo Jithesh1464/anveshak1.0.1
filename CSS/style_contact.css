@@ -1,0 +1,83 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: black;
+}
+
+:root {
+    --backcol: hsla(0, 90%, 100%, 0.023);
+    --boxshadow: hsla(0, 100%, 100%, 0.25);
+    --rightboxshdw: hsla(53, 76%, 75%, 0.7);
+    --rightback: hsla(53, 76%, 72%, 0.057);
+    --boxshdopt: hsla(53, 80%, 36%, 0.681);
+}
+
+.leftbar {
+    font-family: Monoton;
+    font-size: 55px;
+    color: rgb(15, 174, 4);
+    height: 92%;
+    width: 110px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top:8%;
+    bottom: 10%;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 3px 3px 15px 0 var(--boxshadow);
+    background-color: var(--backcol);
+    padding: 3px 3px 3px 4px;
+    transition: all 0.9s ease;
+}
+
+.leftbar:hover {
+    transform: scale(0.9);
+    box-shadow: 3px 3px 15px 0 orangered,0px -3px 15px 0 orangered;
+    color:white;
+    opacity: 0.6;
+}
+
+.anim {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: orange;
+    margin-top: 150px; /* Adjust as needed */
+}
+
+#navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.topnav a {
+    color: black;
+    text-align: center;
+    padding: 17px 47px 17px 47px;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.topnav a:hover {
+    background-color: orangered;
+    color: white;
+}
+
+.topnav a.active {
+    background-color: rgb(15, 174, 4);
+    color: black;
+}

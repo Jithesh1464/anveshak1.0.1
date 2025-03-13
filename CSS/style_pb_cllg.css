@@ -1,0 +1,408 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: black;
+}
+
+:root {
+    --backcol: hsla(0, 90%, 100%, 0.023);
+    --boxshadow: hsla(0, 100%, 100%, 0.25);
+    --rightboxshdw: hsla(53, 76%, 75%, 0.7);
+    --rightback: hsla(53, 76%, 72%, 0.057);
+    --boxshdopt: hsla(53, 80%, 36%, 0.681);
+}
+
+.leftbar {
+    font-family: Monoton;
+    font-size: 55px;
+    color: rgb(15, 174, 4);
+    height: 92%;
+    width: 110px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top:8%;
+    bottom: 10%;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 3px 3px 15px 0 var(--boxshadow);
+    background-color: var(--backcol);
+    padding: 3px 3px 3px 4px;
+    transition: all 0.9s ease;
+}
+
+.leftbar:hover {
+    transform: scale(0.9);
+    box-shadow: 3px 3px 15px 0 orangered,0px -3px 15px 0 orangered;
+    color:white;
+    opacity: 0.6;
+}
+
+.anim {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: orange;
+    margin-top: 150px; /* Adjust as needed */
+}
+
+/* #navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.topnav a {
+    color: black;
+    text-align: center;
+    padding: 17px 47px;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.topnav a:hover {
+    background-color: orangered;
+    color: white;
+}
+
+.topnav a.active {
+    background-color: rgb(15, 174, 4);
+    color: black;
+} */
+
+#navbar {
+  width: 94%;
+  position: fixed;
+  top: 10px;
+  left: 40px;
+  z-index: 1000;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+  border-radius: 30px;
+  border: 4px solid rgba(255, 255, 255, 0.582);
+  box-shadow: 5px 5px 33px 2px rgba(192, 59, 59, 0.5), -5px -5px 20px 2px rgba(192, 59, 59, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.topnav a {
+  color: rgb(207, 206, 206);
+  text-align: center;
+  padding: 20px 35px;
+  border-radius: 30px;
+  margin: 5px 0px;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: bolder;
+  /* transition: background-color 0.5s, color 0.5s,ease-in; */
+  transition: all 0.3s ease;
+}
+
+.topnav a:hover {
+  background-color: orangered;
+  border-radius: 30px;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.topnav a.active {
+  background-color: rgb(15, 174, 4);
+  border-radius: 30px;
+  color: rgb(0, 0, 0);
+}
+
+/* New Class for Making Active Transparent */
+.topnav a.make-transparent {
+  background-color: transparent !important;
+  border-radius: 30px;
+  color: rgb(207, 206, 206) !important;
+}
+
+
+.sidebar-collapser {
+    position: absolute;
+    top: 10px;
+    right: -25px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.3s;
+  }
+  
+  .sidebar-collapser i {
+    font-size: 24px;
+  }
+  
+  .sidebar.sidebar-collapsed .sidebar-collapser {
+    transform: rotate(180deg);
+  }
+  
+  .inputs-vertical {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    letter-spacing: 3px;
+    color: #00ffd5;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    height: 100%;
+  }
+  
+  .sidebar.sidebar-collapsed .inputs-vertical {
+    display: flex;
+  } */
+  
+  
+  
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .checklist_container {
+    height: 92;
+    background-color: rgb(26, 25, 25);
+    padding: 20px;
+    color: rgba(255, 255, 255, 0.819);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  .checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .checklist li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .checklist input[type="checkbox"] {
+    display: none;
+  }
+  
+  .checklist input[type="checkbox"] + label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgb(1, 1, 1);
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .checklist input[type="checkbox"] + label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 90%;
+    background-color: rgb(255, 1, 1);
+  }
+  
+  .checklist input[type="checkbox"]:checked + label::before {
+    background-color: rgb(249, 1, 1);
+  }
+  
+  .checklist input[type="checkbox"] + label::after {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%) scale(0);
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: #000000;
+    transition: transform 0.2s;
+  }
+  
+  .checklist input[type="checkbox"]:checked + label::after {
+    transform: translateX(-50%) scale(1);
+    transform: translateY(-50%) scale(1);
+  }
+  
+  .gender-selector {
+    display: flex;
+    gap: 0px;
+  }
+  
+  .gender-option {
+    font-size: 10px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  #male + .gender-option {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 5px;
+  }
+  
+  #female + .gender-option {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  
+  #transgender + .gender-option {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 0px;
+  }
+  
+  .gender-option.selected {
+    /* background-color: #13ba1b; */
+    background-color: #ba1313;
+    color: white;
+  }
+  
+  .gender-selector input[type="radio"] {
+    display: none;
+  }
+  
+  button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff3c00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #b30000;
+  }
+  
+  .sidebar {
+    width: 300px;
+    height: 700px;
+    transition: width 0.3s;
+    position: fixed;
+    top: 140px;
+    left: 20px;
+  }
+  
+  .sidebar.sidebar-collapsed {
+    width: 100px; /* Adjust width to make it more compact */
+  }
+  
+  .sidebar-collapser {
+    position: absolute;
+    top: 10px;
+    right: -25px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ff0000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.3s;
+    z-index: 10;
+  }
+  
+  .sidebar-collapser i {
+    font-size: 24px;
+  }
+  
+  .sidebar.sidebar-collapsed .sidebar-collapser {
+    transform: rotate(180deg);
+  }
+  
+  .inputs-vertical {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    color: rgb(241, 7, 7);
+    background-color: rgb(30, 30, 30);
+    border-radius: 10px;
+    writing-mode: vertical-lr;
+    text-orientation:sideways;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .sidebar.sidebar-collapsed .inputs-vertical {
+    width: 100px;
+    display: flex;
+    transform: rotate(180deg);
+  }
+  
+  .sidebar.sidebar-collapsed .checklist_container {
+    display: none;
+  }
+  
+
+  input[type="text"]{
+    width:90%;
+    height: 92%;
+    padding:10px;
+    margin-top: 3px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    background-color: rgb(0, 0, 0);
+    color: #ff3c00;
+    transition:all 0.3s ease;
+  }

@@ -1,0 +1,145 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  font-family: 'Monoton', cursive;
+  font-size: 150px;
+  text-align: center;
+  letter-spacing: 10px;
+  background-color: black;
+}
+:root {
+  --orange: rgba(255, 140, 0, 0.7);
+  --white: rgba(255, 255, 255, 0.6);
+  --green: rgba(0, 255, 0, 0.7);
+}
+.Orange { color: var(--orange); }
+.White { color: white; }
+.Green { color: green; }
+.container { position: relative; }
+.creator {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-family: Anta;
+  font-size: 15px;
+  color: white;
+  margin: 10px;
+}
+.blur1, .blur2, .blur3 {
+  height: 12rem;
+  width: 12rem;
+  position: absolute;
+  border-radius: 100px;
+  filter: blur(100px);
+}
+.blur1 { background-color: var(--green); top: 20%; right: 19%; }
+.blur2 { background-color: var(--white); top: 20%; right: 40%; }
+.blur3 { background-color: var(--orange); top: 20%; left: 19%; }
+.blur1:hover, .blur2:hover, .blur3:hover {
+  transform: translateY(50px);
+  transition: all 0.5s ease;
+}
+.curves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Place curves behind content */
+}
+a[href="page1.html"] {
+  height: 50px;
+  width: 160px;
+  text-decoration: none;
+  border: none;
+  border-radius: 13px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px -3px 15px 0px rgba(255, 255, 255, 0.25) inset;
+  color: white;
+  font-family: "Anta";
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 0%;
+  left: 45%;
+  transform: translateY(0px);
+  transition: all 0.6s ease;
+}
+a[href="page1.html"]:hover {
+  opacity: 60%;
+  transform: scale3d(1.2, 1.4, 0.3);
+}
+a[href="page1.html"]:hover + p span.Orange,
+a[href="page1.html"]:hover + p span.White,
+a[href="page1.html"]:hover + p span.Green {
+  color: red;
+}
+
+/*
+.enter_button{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    text-decoration: none;
+    color: inherit;
+    cursor:pointer ;
+    height:100px;
+    width:50px;
+    z-index: 9999;
+}
+button{
+    height:100px;
+    width:50px;
+    border: none;
+    border-radius: 13px;
+    background-color: var(--button_color);
+    clip-path: path("M 0 25 C 0 -5, -5 0, 80 0 S 160 -5, 160 25, 165 50 80 50, 0 55, 0 25");
+    box-shadow: 0px -3px 15px 0px var(--button_color) inset;
+    color: var(--button_color);
+    font-family: "Manrope";
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transform: translateY(0px);
+    transition: all 0.2s ease;
+}*/
+@keyframes zoomFadeOut {
+  0% {
+      transform: scale(1);
+      opacity: 1;
+  }
+  100% {
+      transform: scale(5);
+      opacity: 0;
+  }
+}
+
+/* Apply this class to body when transitioning */
+.page-transition {
+  animation: zoomFadeOut 1.5s ease-out forwards;
+}
+
+/* Styling the Transition Menu */
+.transition-menu {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  opacity: 0; /* Initially Hidden */
+  transition: opacity 0.8s ease-in-out;
+  z-index: 1000; /* Ensures it's visible above everything */
+}
