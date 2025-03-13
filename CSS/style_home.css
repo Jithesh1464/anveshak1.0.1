@@ -31,7 +31,7 @@ html, body {
   justify-content: center;
   position: relative;
   width: 1400px;
-  height: 74px; /* Fixed height */
+  height: 74px;
 }
 
 .topnav a {
@@ -43,9 +43,9 @@ html, body {
   text-decoration: none;
   font-size: 20px;
   font-family: Monoton;
-  font-weight:lighter;
+  font-weight: lighter;
   transition: background-color 0.5s, color 0.5s, ease-in;
-  z-index: 2; /* Above SVG */
+  z-index: 2;
 }
 
 .topnav a:hover {
@@ -66,25 +66,25 @@ html, body {
   color: rgb(207, 206, 206) !important;
 }
 
-/* Rotating Text SVG */
 .rotating-text-svg {
   position: absolute;
-  top: -20px; /* Offset to align with larger outer path */
-  left: -20px; /* Offset to align with larger outer path */
-  width: calc(100% + 63px); /* Increased to match longer path */
-  height: 120px; /* Increased to match taller path */
-  z-index: 1; /* Behind links, above background */
-  pointer-events: none; /* Allow clicks through SVG */
+  top: -20px;
+  left: -20px;
+  width: calc(100% + 63px);
+  height: 120px;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .content {
   color: white;
-  padding: 150px 150px 50px; /* Top padding to clear navbar */
+  padding: 150px 150px 50px;
   font-size: 20px;
   line-height: 1.6;
   max-width: 800px;
   margin: 0 auto;
   position: relative;
+  z-index: 10; /* Above bubbles */
 }
 
 .content h1 {
@@ -116,4 +116,78 @@ html, body {
 
 .content strong {
   color: #eda62b;
+}
+
+/* Bubble Styles */
+.bubble {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  bottom: -60px;
+  opacity: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  animation: rise 6s ease-in-out forwards;
+  z-index: 5; /* Below navbar and content */
+}
+
+.bubble-inner {
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  filter: blur(1px);
+  animation: wobble 3s ease-in-out infinite;
+}
+
+.bubble:hover {
+  transform: scale(2);
+}
+
+.bubble.burst {
+  transform: scale(0);
+  opacity: 0;
+  animation: none;
+}
+
+.bubble.burst .bubble-inner {
+  animation: none;
+}
+
+@keyframes rise {
+  0% {
+      bottom: -60px;
+      opacity: 0;
+  }
+  10% {
+      opacity: 0.8;
+  }
+  90% {
+      opacity: 0.8;
+  }
+  100% {
+      bottom: calc(100% + 60px);
+      opacity: 0;
+  }
+}
+
+@keyframes wobble {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
+
+#bubbleContainer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1; /* Behind everything else */
+  pointer-events: none;
+}
+
+.bubble {
+  pointer-events: auto;
 }
