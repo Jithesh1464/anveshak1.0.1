@@ -77,11 +77,43 @@ html, body {
   pointer-events: none; /* Allow clicks through SVG */
 }
 
-.text {
+.content {
+  color: white;
+  padding: 150px 150px 50px; /* Top padding to clear navbar */
+  font-size: 20px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.content h1 {
+  font-size: 38px;
+  font-family: Monoton;
   color: rgb(243, 207, 25);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 80px;
-  padding: 50px 10px 5px 150px;
+  margin-bottom: 20px;
+}
+
+.content h2 {
+  font-size: 26px;
+  font-family: Monoton;
+  color: #eda62b;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.content h3 {
+  font-size: 22px;
+  font-family: Arial, sans-serif;
+  color: #ff450c;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.content p {
+  margin: 10px 0;
+}
+
+.content strong {
+  color: #eda62b;
 }
